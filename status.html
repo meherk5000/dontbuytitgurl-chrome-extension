@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DontBuyItGurl - Status</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffc0cb;
+      font-family: Arial, sans-serif;
+    }
+    .status-card {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      text-align: center;
+    }
+    .brand-name {
+      font-weight: bold;
+      font-size: 24px;
+      color: #000;
+    }
+    .status-text {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .money-saved, .points-earned {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body class="d-flex flex-column align-items-center justify-content-center vh-100">
+  <div class="brand-name">dontbuyitgurl</div>
+  <div class="status-card">
+    <h4>Welcome back, Meher!</h4>
+    <p class="status-text">Member Status: <span id="status">Frugal Icon 🎉</span></p>
+    <div class="d-flex justify-content-around">
+      <div class="money-saved">£<span id="moneySaved">0</span><br><small>Money Saved</small></div>
+      <div class="points-earned"><span id="points">0</span> XP<br><small>Points Earned</small></div>
+    </div>
+  </div>
+  <script src="status.js"></script>
+</body>
+</html>

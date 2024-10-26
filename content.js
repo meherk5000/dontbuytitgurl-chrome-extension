@@ -1,7 +1,9 @@
+// Check if the current page is a checkout page
 function isCheckoutPage() {
-    return window.location.href.toLowerCase().includes("checkout");
-  }
+  return window.location.href.toLowerCase().includes("checkout");
+}
 
+// Show overlay reminding the user to answer questions
 function showReminderOverlay() {
   const overlay = document.createElement("div");
   overlay.id = "dontBuyItGurlOverlay";
@@ -10,7 +12,7 @@ function showReminderOverlay() {
   overlay.style.left = "0";
   overlay.style.width = "100%";
   overlay.style.height = "100%";
-  overlay.style.backgroundColor = "rgba(255, 192, 203, 0.9)"; // light pink background
+  overlay.style.backgroundColor = "rgba(255, 192, 203, 0.9)"; // Light pink background
   overlay.style.display = "flex";
   overlay.style.alignItems = "center";
   overlay.style.justifyContent = "center";
@@ -25,11 +27,13 @@ function showReminderOverlay() {
   document.body.appendChild(overlay);
 }
 
-function openNewTab() {
-    chrome.runtime.sendMessage({ action: "open_new_tab" });
-  }
+// Function to open the questionnaire in a new tab
+function openQuestionnaireTab() {
+  chrome.runtime.sendMessage({ action: "openQuestionnaire" });
+}
 
-  if (isCheckoutPage()) {
-    showReminderOverlay();
-    openNewTab(); 
-  }
+// If on a checkout page, show overlay and open questionnaire
+if (isCheckoutPage()) {
+  showReminderOverlay();
+  openQuestionnaireTab();
+}

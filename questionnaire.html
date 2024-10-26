@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DontBuyItGurl - Questionnaire</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffc0cb;
+      color: #4a4a4a;
+      font-family: Arial, sans-serif;
+    }
+    .brand-name {
+      font-weight: bold;
+      font-size: 24px;
+      color: #000;
+    }
+    .question-card {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      margin-top: 30px;
+    }
+    .question-text {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+    .btn-yes, .btn-no {
+      border-radius: 20px;
+      font-size: 16px;
+      width: 80px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+    }
+    .btn-yes:hover, .btn-no:hover {
+      background-color: #ff1493;
+    }
+    .btn-status {
+      margin-top: 15px;
+      font-size: 14px;
+      background-color: #4a4a4a;
+      color: white;
+      border-radius: 20px;
+      padding: 8px 20px;
+      border: none;
+    }
+    .btn-status:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body class="d-flex flex-column align-items-center justify-content-center vh-100">
+    <button class="btn btn-status" id="statusBtn">View Profile</button>
+  <div class="text-center">
+    <div class="brand-name">dontbuyitgurl</div>
+    <div>Questions <span id="questionNumber"></span>/5</div>
+  </div>
+  <div class="card question-card text-center">
+    <div class="question-text" id="questionText">Do you really need this?</div>
+    <div>
+      <button class="btn btn-yes mr-3" id="yesBtn">Yes 😊</button>
+      <button class="btn btn-no" id="noBtn">No 🤔</button>
+    </div>
+  </div>
+  <script src="questionnaire.js"></script>
+</body>
+</html>
