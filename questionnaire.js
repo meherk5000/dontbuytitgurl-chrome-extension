@@ -1,9 +1,17 @@
 const questions = [
-    "Do you need this product?",
-    "Have you thought about this purchase?",
+    "Babe, do you even have the funds for this?",
+    "Be honest, have you thought about this purchase?",
     "Will this bring long-term value?",
     "Is this purchase a priority?",
     "Do you still want to proceed?"
+  ];
+
+  const questionImages = [
+    "images/noMoneyHere.gif",
+    "images/disappointedRobot.gif",
+    "images/thinkinghead.png",
+    "images/why.jpg",
+    "images/henrydanger.png"
   ];
   
   let currentQuestionIndex = 0;
@@ -12,6 +20,7 @@ const questions = [
   function updateQuestion() {
     document.getElementById("questionText").innerText = questions[currentQuestionIndex];
     document.getElementById("questionNumber").innerText = currentQuestionIndex + 1;
+    document.getElementById("questionImage").src = questionImages[currentQuestionIndex];
   }
   
   function handleAnswer(answer) {

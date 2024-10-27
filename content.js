@@ -4,15 +4,15 @@ function isCheckoutPage() {
 }
 
 // Show overlay reminding the user to answer questions
+const overlay = document.createElement("div");
 function showReminderOverlay() {
-  const overlay = document.createElement("div");
   overlay.id = "dontBuyItGurlOverlay";
   overlay.style.position = "fixed";
   overlay.style.top = "0";
   overlay.style.left = "0";
   overlay.style.width = "100%";
   overlay.style.height = "100%";
-  overlay.style.backgroundColor = "rgba(255, 192, 203, 0.9)"; // Light pink background
+  overlay.style.backgroundColor = "rgba(255, 192, 203, 0.9)"; 
   overlay.style.display = "flex";
   overlay.style.alignItems = "center";
   overlay.style.justifyContent = "center";
